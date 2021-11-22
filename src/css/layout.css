@@ -1,0 +1,45 @@
+.layout {
+  display: grid;
+  position: relative;
+  grid-auto-rows: 300px;
+  row-gap: 1.5rem;
+}
+
+img{
+  border-radius: 7px;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.layout-card.over{
+  border: 3px dotted #666;
+}
+.card-container{
+  position: relative;
+}
+.layout-heading{
+  position: absolute;
+  left: 5px;
+  top: -45px;
+}
+.add-card {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 20px;
+  margin-left: 15px;
+}
+.load {
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.save {
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 15px;
+  margin-right: 15px;
+}

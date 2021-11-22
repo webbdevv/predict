@@ -1,0 +1,46 @@
+.save-modal {
+  width: 400px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 101;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-field {
+  padding: 12px;
+}
+input {
+  display: block;
+  padding: 6px 12px;
+}
+
+.info-modal {
+  width: 600px;
+  padding: 40px;
+  padding-top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 101;
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column; 
+}
+.info-header {
+  font-weight: 400;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.close-info {
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+}
