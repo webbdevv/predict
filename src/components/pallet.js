@@ -13,6 +13,7 @@ export default function Pallet() {
     this.style.opacity = '1';
   }
 
+  //add drag event listeners
   useEffect(() => {
     let items = document.querySelectorAll('.pallet-img')
     items.forEach(el => {
@@ -20,6 +21,7 @@ export default function Pallet() {
       el.addEventListener('dragend', handleDragEnd);
     })
   }, [])
+
   const palletImgs = imageUrls.map((u, i) => (
     <div className="pallet-img" key={u + i} draggable={true}>
       <img src={u} alt="" />

@@ -4,12 +4,12 @@ import SaveModal from './save_modal'
 import Image from './image'
 export default function Layout() {
   const base = {
-    0: ["p 300 300 0 0"],
+    0: ["p 300 300 0 0"], //format is [url height width top left] to hold size and position variables
     1: ["p 300 300 0 0"],
     2: ["p 300 300 0 0"],
     3: ["p 300 300 0 0"]
   }
-  const [cards, setCards] = useState(Object.assign({}, base))
+  const [cards, setCards] = useState(Object.assign({}, base)) //state to hold cards that make up the gallery
   const [count, setCount] = useState(4) //keep track of cards
   const [layouts, setLayouts] = useState({}) //collect saved layouts
   const [open, setOpen] = useState(false) //modal
@@ -81,7 +81,9 @@ export default function Layout() {
     setCards(newState)
   }
   const cardElements = Object.entries(cards).map(([k, v], i) => (  
-      <Image container={cards[i]} updateCards={updateCards} id={i} ctx={v}  onDrop={handleDrop} onDragLeave={handleDragLeave} onDragOver={handleDragEnter} onDragStart={handleDragStart} onDragEnd={handleDragEnd}/>
+      <Image container={cards[i]} updateCards={updateCards} id={i} ctx={v} 
+      onDrop={handleDrop} onDragLeave={handleDragLeave} onDragOver={handleDragEnter} 
+      onDragStart={handleDragStart} onDragEnd={handleDragEnd}/>
   ))
   const optionElements = Object.entries(layouts).map(([k, v], i) => (
     <option value={k}>{k}</option>
